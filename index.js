@@ -8,6 +8,7 @@ module.exports = postcss.plugin('postcss-url-resolver', function (options) {
     modernBrowser: false,
     userAgent: null,
     base64: false,
+    exclude: null,
     request: function() { throw Error('\'options.request\' is required!') }
   };
 
@@ -28,6 +29,7 @@ function importResolver(root, options, resource) {
   root.walkAtRules('import', function checkAtRule(atRule) {
     var params = postcss.list.space(atRule.params);
     var remoteFile = lib.cleanupUrl(params[0]);
+    if (options.exclude && options.exclude.test(remoteFile)) return;
     if (parentResource) {
       remoteFile = lib.relativeUrl(remoteFile, parentResource);
     }
