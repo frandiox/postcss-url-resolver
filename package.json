@@ -1,0 +1,41 @@
+{
+  "name": "postcss-url-resolver",
+  "version": "0.0.0",
+  "description": "PostCSS plugin that resolves urls (CSS imports and images) via http requests. Isomorphic (node + browser).",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "url",
+    "resolve",
+    "import",
+    "image",
+    "svg",
+    "isomorphic",
+    "inliner"
+  ],
+  "author": "Fran Dios <me@frandiox.com>",
+  "license": "MIT",
+  "repository": "frandiox/postcss-url-resolver",
+  "bugs": {
+    "url": "https://github.com/frandiox/postcss-url-resolver/issues"
+  },
+  "homepage": "https://github.com/frandiox/postcss-url-resolver",
+  "dependencies": {
+    "postcss": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^20.0.0"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  }
+}
