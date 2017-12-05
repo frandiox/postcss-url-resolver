@@ -1,13 +1,9 @@
 var url = require('url');
 var trim = require('lodash.trim');
 
-// REQUIREMENTS:
-// * Promise polyfill
-// * Provie options.request, function returning a promise which resolves to response.body
-
 module.exports = {
 
-  // Wether it is url-like syntax
+  // Whether it is url-like syntax
   isUrl: function(string) {
     return /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/.test(string);
   },
@@ -35,14 +31,6 @@ module.exports = {
 
   request: function(remoteFile, options) {
     var reqOptions = url.parse(remoteFile);
-
-    reqOptions.headers = {};
-    if (options.modernBrowser) {
-      reqOptions.headers['user-agent'] = 'Mozilla/5.0 AppleWebKit/538.0 Chrome/54.0 Safari/538';
-    }
-    if (options.userAgent) {
-      reqOptions.headers['user-agent'] = String(options.userAgent);
-    }
 
     return options
       .request(reqOptions)

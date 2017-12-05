@@ -5,8 +5,6 @@ module.exports = postcss.plugin('postcss-url-resolver', function (options) {
   // Work with options here
   var defaults = {
     recursive: true,
-    modernBrowser: false,
-    userAgent: null,
     base64: false,
     exclude: null,
     request: function() { throw Error('\'options.request\' is required!') }
