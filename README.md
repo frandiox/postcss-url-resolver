@@ -13,7 +13,7 @@ This plugin is a combination of [`postcss-import-url`](https://github.com/unligh
 * Recursively resolves `@import` and `url(...)` of remote files.
 * Optionally inlines images in base64.
 * Isomorphic. Works in Node and the browser.
-* HTTP client agnostic. It must be provided as a parameter.
+* HTTP client agnostic. It must be provided as a parameter. This also allows providing custom cache or headers.
 
 **Requirements**:
 
