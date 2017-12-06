@@ -1,0 +1,3 @@
+body { color: grey; }
+@import url('./dir/fixture2.css');
+body { color: blue; }
