@@ -17,6 +17,7 @@
   "author": "Fran Dios <me@frandiox.com>",
   "license": "MIT",
   "repository": "frandiox/postcss-url-resolver",
+  "main": "src/index.js",
   "bugs": {
     "url": "https://github.com/frandiox/postcss-url-resolver/issues"
   },
@@ -27,13 +28,12 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
+    "eslint": "^4.12.1",
     "eslint-config-postcss": "^2.0.2",
-    "http-https": "^1.0.0",
-    "jest": "^20.0.0"
+    "jest": "^21.2.1"
   },
   "scripts": {
-    "test": "jest && eslint *.js"
+    "test": "jest test && eslint src/*.js"
   },
   "eslintConfig": {
     "extends": "eslint-config-postcss/es5",
