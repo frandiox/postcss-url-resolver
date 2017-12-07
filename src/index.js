@@ -8,7 +8,7 @@ var PROP_REGEX = /^(-(webkit|moz|o|ms)-)?(?=--|cue|play|mask|background|content|
 function imageResolver(root, base, options) {
     var urls = [];
 
-    root.walkDecls(PROP_REGEX, decl => {
+    root.walkDecls(PROP_REGEX, function (decl) {
         var remoteUrl;
         decl.value = decl.value.replace(URL_REGEX, function (match, url) {
             remoteUrl = lib.relativeUrl(url, base);

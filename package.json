@@ -1,6 +1,6 @@
 {
   "name": "postcss-url-resolver",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "PostCSS plugin that resolves urls (CSS imports and images) via http requests. Isomorphic (node + browser).",
   "keywords": [
     "postcss",
@@ -33,7 +33,8 @@
     "jest": "^21.2.1"
   },
   "scripts": {
-    "test": "jest test && eslint src/*.js"
+    "test": "jest test && eslint src/*.js",
+    "prepare": "npm run test"
   },
   "eslintConfig": {
     "extends": "eslint-config-postcss/es5",
